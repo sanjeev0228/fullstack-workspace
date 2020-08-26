@@ -34,7 +34,11 @@
 <button id="show"class="btn btn-success btn-block">show</button><br />
 
 <button id="flip" class="btn-muted btn btn-large">Click to slide down panel</button>
-<div id="panel">Hello world! welcome</div>
+<div id="panel">Hello world! welcome</div><br />
+<!-- chainin effect start here -->
+<p id="p1">jQuery is fun!!!!</p>
+<button id="button"class="btn btn-grey btn-large">Click me</button>
+
 
 <!-- script code here  for hide and show effect-->
 <script>
@@ -53,7 +57,12 @@ $("#flip").click(function(){
   $("#panel").slidedown("slow");
   });
   });
-
+<!-- chaining effect jquery -->
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+  });
+});
 </script>
 </body>
 </html>
